@@ -1,0 +1,5 @@
+pip install psycopg2-binary
+pip install psycopg2
+these two packages are reqiured to use the postgress in django
+
+pip freeze > requirements.txt  this will store the name and version of all the packages which we have installed
