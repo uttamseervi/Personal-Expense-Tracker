@@ -14,7 +14,7 @@ const SuggestionBox = ({total_spent_amount,total_savings_amount}) => {
             setLoading(true);
             try {
                 const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/api/get_suggestions/`,{
-                    prompt: `based on my ${total_savings_amount} savings and ${total_spent_amount} spent this month give me some suggestion to save more money and spend less and efficiently in 4 0r 5 lines and show the saving amount(rupees) and spent amount(rupees) in the response`,
+                    prompt: `based on my ${total_savings_amount} savings and ${total_spent_amount} spent this month give me some suggestion to save more money and spend less and efficiently in  4 or 6 lines and show the saving amount(rupees) and spent amount(rupees) in the response with some suitable emojis`,
                 });
                 setSuggestions(response.data.response || []);
                 setLoading(false);
@@ -43,7 +43,7 @@ const SuggestionBox = ({total_spent_amount,total_savings_amount}) => {
 
     return (
         <div id="suggestionBox" className="p-6 mx-auto h-60 overflow-y-auto bg-[#FAF7F0]  rounded-lg w-[90%] mt-5">
-            <h1 className="font-bold text-2xl font-sans">Your Personal Money Mentor</h1>
+            <h1 className="font-bold text-2xl font-sans">Your Personal Money Mentor {' '}💹</h1>
 
             {loading && <SuggestionBoxSkeleton />}
             {error && <p className="text-red-500">{error}</p>}

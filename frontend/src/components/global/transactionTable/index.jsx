@@ -90,7 +90,7 @@ const TransactionTable = () => {
                             {transactions.map((transaction, index) => (
                                 <tr key={index} className="bg-transparent">
                                     <td className="px-4 py-2 text-sm text-gray-800">{transaction?.transaction_name}</td>
-                                    <td className="px-4 py-2 text-sm text-gray-800">${transaction?.transaction_amount}</td>
+                                    <td className="px-4 py-2 text-sm text-gray-800">₹{transaction?.transaction_amount}</td>
                                     <td className="px-4 py-2 text-sm text-gray-800">{transaction?.transaction_date}</td>
                                     <td className="px-4 py-2 text-sm text-gray-800">{transaction?.transaction_category}</td>
                                 </tr>
